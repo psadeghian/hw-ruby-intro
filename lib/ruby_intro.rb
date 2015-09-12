@@ -40,15 +40,23 @@ end
 # Part 2
 
 def hello(name)
-  return "Hello, " name.capitalize
+  return "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  return false if s.match(/^[[:alpha:]]/) == nil
+  rx = [/^A/i, /^E/i, /^I/i, /^O/i, /^U/i]
+  rx.each do |regex|
+    return false if s.match(regex) != nil
+  end 
+  return true
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  s = s.to_s
+  return true if s == "0"
+  return false if s.match(/^[10]*00$/) == nil
+  return true
 end
 
 # Part 3
