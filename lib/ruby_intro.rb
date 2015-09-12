@@ -62,5 +62,31 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize(isbn, price)
+    if isbn == "" || price <= 0
+      raise ArgumentError
+    end
+    @isbn = isbn
+    @price = price
+  end
+  
+  def isbn
+    @isbn
+  end
+  
+  def isbn=(new_isbn)
+    @isbn = new_isbn
+  end
+  
+  def price
+    @price
+  end
+  
+  def price=(new_price)
+    @price = new_price
+  end
+  
+  def price_as_string
+    return "$#{format("%.2f", price)}"
+  end
 end
