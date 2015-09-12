@@ -1,3 +1,6 @@
+# Pash Sadeghian
+# Dr. Verdicchio
+# 9/11/2015
 # When done, submit this entire file to the autograder.
 
 # Part 1
